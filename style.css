@@ -1,0 +1,392 @@
+/* Color Palette Variables */
+:root {
+    --bg-main: #0b0f19;
+    --card-surface: rgba(22, 32, 54, 0.6);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-glow: #00f0ff;
+    --gradient-vibrant: linear-gradient(135deg, #ff007f 0%, #7f00ff 50%, #00f0ff 100%);
+    --mesh-glow: radial-gradient(circle at 10% 20%, rgba(255, 0, 127, 0.12) 0%, transparent 40%),
+                 radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.12) 0%, transparent 40%);
+}
+
+/* Global Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    background-image: var(--mesh-glow);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Glassmorphic Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 15, 25, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-glow);
+}
+
+/* Typography Gradient */
+.gradient-text {
+    background: var(--gradient-vibrant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Presentation Container */
+.hero {
+    padding: 160px 20px 60px;
+    text-align: center;
+}
+
+.badge-container {
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    color: var(--accent-glow);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.location-tag {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.location-tag i {
+    color: #ff007f;
+}
+
+/* Unified Layout Header Settings */
+.section {
+    padding: 60px 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-title i {
+    background: var(--gradient-vibrant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Blockquotes */
+.quote-card {
+    background: var(--card-surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 35px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    opacity: 0.15;
+    margin-bottom: 10px;
+    background: var(--gradient-vibrant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quote-card p {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #cbd5e1;
+}
+
+/* Skill Blocks Layout */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skills-category-card {
+    background: var(--card-surface);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.skills-category-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f8fafc;
+}
+
+.skills-category-card h3 i {
+    color: var(--accent-glow);
+}
+
+.skill-item {
+    margin-bottom: 16px;
+}
+
+.skill-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--gradient-vibrant);
+    border-radius: 10px;
+}
+
+/* Advanced Project Cards grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+.project-showcase-card {
+    background: var(--card-surface);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 240, 255, 0.25);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-icon {
+    font-size: 1.8rem;
+    background: var(--gradient-vibrant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.project-showcase-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-showcase-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-tech-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tech-tags span {
+    font-size: 0.8rem;
+    color: var(--accent-glow);
+    background: rgba(0, 240, 255, 0.06);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Immersive Timeline Structure */
+.enhanced-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.enhanced-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff007f, #7f00ff, rgba(127,0,255,0));
+}
+
+.timeline-block {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0b0f19;
+    border: 2px solid #7f00ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: var(--accent-glow);
+    box-shadow: 0 0 10px rgba(127, 0, 255, 0.5);
+}
+
+.timeline-content-box {
+    background: var(--card-surface);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ff007f;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-content-box h3 {
+    font-size: 1.3rem;
+    margin: 5px 0 2px;
+}
+
+.timeline-content-box h4 {
+    font-size: 0.95rem;
+    color: var(--accent-glow);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.timeline-content-box p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Adaptive Media Query Breakdown */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Kept clean for single-page presentation viewports */
+    .hero h1 { font-size: 2.8rem; }
+    .gradient-text { letter-spacing: -0.5px; }
+}
