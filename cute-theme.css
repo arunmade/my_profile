@@ -1,15 +1,16 @@
-/* Sky Blue (40%) and Clean White (60%) Minimalist Palette */
+/* Sky Blue (40%) and Clean White (60%) Soft Gradient Theme */
 :root {
-    --sky-blue-main: #e0f2fe;     /* Cute soft sky blue background */
     --sky-blue-accent: #38bdf8;   /* Bright playful sky blue for links/bars */
     --sky-blue-dark: #0369a1;     /* Contrast blue for clean typography */
     --white-surface: #ffffff;     /* Pure clean crisp white surfaces */
     --text-dark: #1e293b;         /* Dark graphite text for extreme readability */
     --text-muted: #64748b;        /* Muted soft gray text */
-    --border-subtle: #f1f5f9;     /* Ultra thin sleek divider lines */
+    
+    /* 40/60 Gradient Formula */
+    --gradient-bg: linear-gradient(135deg, #ffffff 55%, #e0f2fe 100%);
 }
 
-/* Global Adjustments - Making everything slightly smaller, tighter, and cute */
+/* Global Adjustments - Tighter layout proportions */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,14 +20,16 @@
 }
 
 body {
-    background-color: var(--sky-blue-main); /* 40% tone allocation */
+    background: var(--gradient-bg);
+    background-attachment: fixed; /* Keeps the gradient smooth as you scroll */
     color: var(--text-dark);
     line-height: 1.5;
-    font-size: 0.9rem; /* Smaller global text */
+    font-size: 0.9rem;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 850px; /* Slimmer layout grid */
+    max-width: 850px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -38,7 +41,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.15);
 }
@@ -146,6 +149,7 @@ body {
     font-weight: 600;
     font-size: 0.85rem;
     transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(56, 189, 248, 0.1);
 }
 
 .linkedin-btn:hover {
@@ -154,14 +158,14 @@ body {
     transform: translateY(-1px);
 }
 
-/* Cute White Cards (60% Layout Base) */
+/* Crisp Content Display Blocks */
 .quote-card {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.04);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
 }
 
 .quote-card p {
@@ -183,7 +187,7 @@ body {
     gap: 10px;
 }
 
-/* Skills Blocks Grid */
+/* Skills Layout System */
 .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -194,7 +198,7 @@ body {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 18px;
-    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.04);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
 }
 
 .skills-category-card h3 {
@@ -227,11 +231,11 @@ body {
 
 .progress {
     height: 100%;
-    background: var(--sky-blue-accent);
+    background: linear-gradient(90deg, var(--sky-blue-accent), #0ea5e9);
     border-radius: 6px;
 }
 
-/* Cute Clean Project Cards */
+/* Project Presentation Showcase Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -245,12 +249,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.04);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-showcase-card:hover {
     transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(3, 105, 161, 0.08);
 }
 
 .project-header {
@@ -267,7 +272,7 @@ body {
 
 .project-tag {
     font-size: 0.7rem;
-    background: var(--sky-blue-main);
+    background: #e0f2fe;
     padding: 2px 8px;
     border-radius: 10px;
     color: var(--sky-blue-dark);
@@ -295,12 +300,12 @@ body {
 .project-tech-tags span {
     font-size: 0.7rem;
     color: var(--sky-blue-dark);
-    background: var(--sky-blue-main);
+    background: #e0f2fe;
     padding: 2px 6px;
     border-radius: 4px;
 }
 
-/* Mini Minimalist Timeline */
+/* Timeline Components */
 .enhanced-timeline {
     position: relative;
     padding-left: 20px;
@@ -341,7 +346,7 @@ body {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 16px;
-    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.04);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
 }
 
 .timeline-date {
