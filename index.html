@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,10 @@
 </head>
 <body>
 
+    <!-- Compact Glass Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo gradient-text">Arun.</a>
+            <a href="#" class="nav-logo">Arun.</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -21,12 +22,13 @@
         </div>
     </nav>
 
+    <!-- Cute & Minimal Hero Section -->
     <header class="hero" id="about">
         <div class="hero-content">
             <div class="badge-container">
                 <span class="status-badge"><span class="dot"></span> Open to Opportunities</span>
             </div>
-            <h1 class="gradient-text">Made Arun Kumar</h1>
+            <h1>Made Arun Kumar</h1>
             <p class="subtitle">Final-year ECE Student at BVRIT | RTL Design & FPGA Prototyping</p>
             <div class="location-tag"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana</div>
             
@@ -40,17 +42,18 @@
 
     <main class="container">
 
+        <!-- Cute Quote Block -->
         <section class="quote-card">
-            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
             <p>"Empathy and user understanding guide my engineering. Whether designing a hardware verification testbench or building an AI model, I focus on creative problem solving, rapid prototyping, and an absolute focus on simplicity and clarity."</p>
         </section>
 
+        <!-- Skills Inventory -->
         <section class="section" id="skills">
             <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Skills Inventory</h2>
             <div class="skills-wrapper">
                 
                 <div class="skills-category-card">
-                    <h3><i class="fa-solid fa-microchip"></i> Hardware Description & Verification</h3>
+                    <h3><i class="fa-solid fa-microchip"></i> Hardware & Verification</h3>
                     <div class="skill-item"><span>Verilog HDL</span><div class="progress-bar"><div class="progress" style="width: 92%;"></div></div></div>
                     <div class="skill-item"><span>Digital Logic Design</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
                     <div class="skill-item"><span>ASIC Flow</span><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
@@ -60,9 +63,9 @@
 
                 <div class="skills-category-card">
                     <h3><i class="fa-solid fa-server"></i> FPGA & Embedded Hardware</h3>
-                    <div class="skill-item"><span>Xilinx Vivado (Synthesis & Closure)</span><div class="progress-bar"><div class="progress" style="width: 88%;"></div></div></div>
-                    <div class="skill-item"><span>BASYS3 & ZED Board (Zynq-7000)</span><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
-                    <div class="skill-item"><span>Python & C Systems Programming</span><div class="progress-bar"><div class="progress" style="width: 82%;"></div></div></div>
+                    <div class="skill-item"><span>Xilinx Vivado (Synthesis)</span><div class="progress-bar"><div class="progress" style="width: 88%;"></div></div></div>
+                    <div class="skill-item"><span>BASYS3 & ZED Board (Zynq)</span><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
+                    <div class="skill-item"><span>Python & C Programming</span><div class="progress-bar"><div class="progress" style="width: 82%;"></div></div></div>
                     <div class="skill-item"><span>Microcontrollers (Raspberry Pi)</span><div class="progress-bar"><div class="progress" style="width: 58%;"></div></div></div>
                 </div>
 
@@ -77,6 +80,7 @@
             </div>
         </section>
 
+        <!-- Engineering Projects -->
         <section class="section" id="projects">
             <h2 class="section-title"><i class="fa-solid fa-code-branch"></i> Engineering Projects</h2>
             <div class="projects-grid">
@@ -86,22 +90,22 @@
                         <i class="fa-solid fa-memory project-icon"></i>
                         <span class="project-tag">Hardware / RTL</span>
                     </div>
-                    <h3>FIFO – FPGA Implementation on BASYS3</h3>
-                    <p>Implemented a true single-port FIFO in Verilog HDL. Completed full RTL coding, functional simulation, synthesis, and timing closure. Resolved timing challenges using set_false_path constraints on asynchronous ports; successfully verified on hardware using built-in LEDs and Switches.</p>
+                    <h3>FIFO – FPGA Implementation</h3>
+                    <p>Implemented a true single-port FIFO in Verilog HDL. Completed RTL coding, functional simulation, synthesis, and timing closure in Vivado using set_false_path constraints on asynchronous ports.</p>
                     <div class="project-tech-tags">
-                        <span>Verilog</span><span>Xilinx Vivado</span><span>BASYS3</span><span>Timing Closure</span>
+                        <span>Verilog</span><span>Vivado</span><span>BASYS3</span>
                     </div>
                 </div>
 
                 <div class="project-showcase-card">
                     <div class="project-header">
                         <i class="fa-solid fa-satellite-dish project-icon"></i>
-                        <span class="project-tag">Simulation Design</span>
+                        <span class="project-tag">Simulation</span>
                     </div>
-                    <h3>Electromagnetic Analysis of RF MEMS Switch</h3>
-                    <p>Designed and modeled an RF MEMS switch structure using Ansys HFSS. Analyzed insertion loss, isolation parameters, electric/magnetic field distributions, and surface current densities across both ON and OFF switching states to optimize RF signal performance.</p>
+                    <h3>RF MEMS Switch Analysis</h3>
+                    <p>Designed an RF MEMS switch using Ansys HFSS. Analyzed insertion loss, isolation, field distribution, and surface current densities across switching states to grasp RF behavior.</p>
                     <div class="project-tech-tags">
-                        <span>Ansys HFSS</span><span>COMSOL</span><span>RF Electronics</span><span>MEMS</span>
+                        <span>Ansys HFSS</span><span>COMSOL</span><span>RF MEMS</span>
                     </div>
                 </div>
 
@@ -110,16 +114,17 @@
                         <i class="fa-solid fa-eye project-icon"></i>
                         <span class="project-tag">AI / Embedded</span>
                     </div>
-                    <h3>Smart Vision – AI Wearable for Visually Impaired</h3>
-                    <p>Built an AI-powered wearable scene narrator ("Vision Whisperer") using a Raspberry Pi framework. Successfully integrated an external camera module and a real-time AI inference engine to deliver scene descriptions to users via an audio interface.</p>
+                    <h3>Smart Vision AI Assistant</h3>
+                    <p>Built an AI wearable scene narrator on a Raspberry Pi framework. Integrated an external camera module and a real-time inference engine to convey audio scene data.</p>
                     <div class="project-tech-tags">
-                        <span>Python</span><span>Raspberry Pi</span><span>AI Inference</span><span>Hardware Interfacing</span>
+                        <span>Python</span><span>Raspberry Pi</span><span>AI Inference</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Certifications & Credentials -->
         <section class="section" id="certifications">
             <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Certifications & Credentials</h2>
             <div class="enhanced-timeline">
@@ -130,47 +135,27 @@
                         <span class="timeline-date">Industry Training</span>
                         <h3>VLSI Course Training</h3>
                         <h4>HCL Technologies (Ongoing)</h4>
-                        <p>Industry-oriented curriculum diving deep into advanced ASIC flows, covering standard RTL design rules, synthesis pipelines, STA foundations, and hardware block physical verification.</p>
+                        <p>ASIC flow track covering RTL design, synthesis fundamentals, STA basics, and physical verification layouts.</p>
                     </div>
                 </div>
 
                 <div class="timeline-block">
                     <div class="timeline-dot"><i class="fa-solid fa-award"></i></div>
                     <div class="timeline-content-box">
-                        <span class="timeline-date">NPTEL Elite Honors</span>
-                        <h3>Advanced Circuit Design Certification</h3>
-                        <h4>NPTEL National Certifications</h4>
-                        <p>Earned <strong>Elite</strong> designations across foundational domains: <em>Digital Circuits (63%)</em> and <em>Integrated Circuits & Applications (60%)</em>, mastering operational configurations down to the CMOS level.</p>
+                        <span class="timeline-date">NPTEL Honors</span>
+                        <h3>Advanced Circuit Design</h3>
+                        <h4>NPTEL Elite Certifications</h4>
+                        <p>Earned Elite status in <em>Digital Circuits (63%)</em> and <em>Integrated Circuits & Applications (60%)</em> layouts.</p>
                     </div>
                 </div>
 
                 <div class="timeline-block">
                     <div class="timeline-dot"><i class="fa-solid fa-microchip"></i></div>
                     <div class="timeline-content-box">
-                        <span class="timeline-date">Short-Term Training Program</span>
-                        <h3>AI-Driven Systems with Vision FPGA & MEMS</h3>
-                        <h4>STTP Technical Track</h4>
-                        <p>Hands-on architectural implementation utilizing Kria KV260 Vision FPGAs, Pynq Development Boards, Ubuntu target environments, and Jupyter-driven simulation pipelines inside COMSOL Multiphysics.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-block">
-                    <div class="timeline-dot"><i class="fa-solid fa-gears"></i></div>
-                    <div class="timeline-content-box">
-                        <span class="timeline-date">Practical Workshop</span>
-                        <h3>PCB Design Fundamentals</h3>
-                        <h4>AICTE-IDEA Lab</h4>
-                        <p>Gained intensive lab experience covering multi-layer layout architecture rules, manufacturing trace constraints, schematic routing logic, and physical prototype fabrication cycles.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-block">
-                    <div class="timeline-dot"><i class="fa-solid fa-trophy"></i></div>
-                    <div class="timeline-content-box">
-                        <span class="timeline-date">Competition Pre-Finalist</span>
-                        <h3>PALS InnoWAH Innovation Platform</h3>
-                        <h4>User-Centered Tech Design</h4>
-                        <p>Selected to pitch technical proof-of-concepts before judging panels. Built using rapid physical prototyping frameworks and multi-disciplinary team leadership.</p>
+                        <span class="timeline-date">Training Track</span>
+                        <h3>AI Systems with Vision FPGA & MEMS</h3>
+                        <h4>STTP Technical Program</h4>
+                        <p>Hands-on work with Kria KV260, Pynq environments, and COMSOL Multiphysics simulation routines.</p>
                     </div>
                 </div>
 
@@ -180,7 +165,7 @@
     </main>
 
     <footer>
-        <p>© 2026 • Made Arun Kumar • Designed for clarity and fast learner.</p>
+        <p>© 2026 • Made Arun Kumar • Clean, Cute & Functional</p>
     </footer>
 
 </body>
