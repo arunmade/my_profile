@@ -5,6 +5,7 @@
     --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
     --accent-glow: #00f0ff;
+    --linkedin-color: #0077b5;
     --gradient-vibrant: linear-gradient(135deg, #ff007f 0%, #7f00ff 50%, #00f0ff 100%);
     --mesh-glow: radial-gradient(circle at 10% 20%, rgba(255, 0, 127, 0.12) 0%, transparent 40%),
                  radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.12) 0%, transparent 40%);
@@ -134,10 +135,36 @@ body {
 .location-tag {
     font-size: 0.95rem;
     color: var(--text-secondary);
+    margin-bottom: 25px;
 }
 
 .location-tag i {
     color: #ff007f;
+}
+
+/* LinkedIn Interactive Button */
+.cta-container {
+    margin-top: 15px;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4);
 }
 
 /* Unified Layout Header Settings */
@@ -240,7 +267,7 @@ body {
 /* Advanced Project Cards grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 25px;
 }
 
@@ -249,6 +276,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 16px;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -281,7 +311,7 @@ body {
 }
 
 .project-showcase-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     margin-bottom: 10px;
 }
 
@@ -289,16 +319,17 @@ body {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .project-tech-tags {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .project-tech-tags span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--accent-glow);
     background: rgba(0, 240, 255, 0.06);
     padding: 4px 10px;
@@ -386,7 +417,7 @@ footer {
 
 /* Adaptive Media Query Breakdown */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Kept clean for single-page presentation viewports */
+    .nav-links { display: none; }
     .hero h1 { font-size: 2.8rem; }
     .gradient-text { letter-spacing: -0.5px; }
 }
