@@ -1,16 +1,16 @@
-/* Sky Blue (40%) and Clean White (60%) Soft Gradient Theme */
+/* Enhanced Rich Sky Blue Gradient Theme */
 :root {
-    --sky-blue-accent: #38bdf8;   /* Bright playful sky blue for links/bars */
-    --sky-blue-dark: #0369a1;     /* Contrast blue for clean typography */
-    --white-surface: #ffffff;     /* Pure clean crisp white surfaces */
-    --text-dark: #1e293b;         /* Dark graphite text for extreme readability */
-    --text-muted: #64748b;        /* Muted soft gray text */
+    --sky-blue-accent: #0284c7;   /* Rich sky blue for interactive elements */
+    --sky-blue-dark: #0369a1;     /* Deep sea contrast blue for typography */
+    --white-surface: #f0f9ff;     /* Cute ultra-soft ice blue for cards */
+    --text-dark: #0f172a;         /* High-contrast slate text for legibility */
+    --text-muted: #475569;        /* Balanced gray-blue text */
     
-    /* 40/60 Gradient Formula */
-    --gradient-bg: linear-gradient(145deg, #ffffff 25%, #e0f2fe 100%);
+    /* Stronger, more vibrant blue gradient layout balance */
+    --gradient-bg: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
 }
 
-/* Global Adjustments - Tighter layout proportions */
+/* Global Adjustments */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +21,7 @@
 
 body {
     background: var(--gradient-bg);
-    background-attachment: fixed; /* Keeps the gradient smooth as you scroll */
+    background-attachment: fixed;
     color: var(--text-dark);
     line-height: 1.5;
     font-size: 0.9rem;
@@ -41,9 +41,9 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(224, 242, 254, 0.95);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    border-bottom: 1px solid rgba(2, 132, 199, 0.2);
 }
 
 .nav-container {
@@ -91,7 +91,7 @@ body {
 }
 
 .status-badge {
-    background: #fff;
+    background: #ffffff;
     border: 1px solid var(--sky-blue-accent);
     color: var(--sky-blue-dark);
     padding: 4px 10px;
@@ -140,7 +140,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--white-surface);
+    background: #ffffff;
     border: 1px solid var(--sky-blue-accent);
     color: var(--sky-blue-dark);
     text-decoration: none;
@@ -149,7 +149,7 @@ body {
     font-weight: 600;
     font-size: 0.85rem;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(56, 189, 248, 0.1);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.1);
 }
 
 .linkedin-btn:hover {
@@ -158,14 +158,15 @@ body {
     transform: translateY(-1px);
 }
 
-/* Crisp Content Display Blocks */
+/* Ice Blue Display Blocks */
 .quote-card {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.08);
+    border: 1px solid rgba(3, 105, 161, 0.1);
 }
 
 .quote-card p {
@@ -198,7 +199,8 @@ body {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 18px;
-    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.08);
+    border: 1px solid rgba(3, 105, 161, 0.05);
 }
 
 .skills-category-card h3 {
@@ -224,14 +226,14 @@ body {
 .progress-bar {
     width: 100%;
     height: 5px;
-    background: #f1f5f9;
+    background: #e2e8f0;
     border-radius: 6px;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--sky-blue-accent), #0ea5e9);
+    background: linear-gradient(90deg, #38bdf8, var(--sky-blue-accent));
     border-radius: 6px;
 }
 
@@ -249,13 +251,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.08);
+    border: 1px solid rgba(3, 105, 161, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-showcase-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 24px rgba(3, 105, 161, 0.08);
+    box-shadow: 0 6px 24px rgba(3, 105, 161, 0.12);
 }
 
 .project-header {
@@ -272,10 +275,10 @@ body {
 
 .project-tag {
     font-size: 0.7rem;
-    background: #e0f2fe;
+    background: #cbd5e1;
     padding: 2px 8px;
     border-radius: 10px;
-    color: var(--sky-blue-dark);
+    color: var(--text-dark);
     font-weight: 600;
 }
 
@@ -300,7 +303,7 @@ body {
 .project-tech-tags span {
     font-size: 0.7rem;
     color: var(--sky-blue-dark);
-    background: #e0f2fe;
+    background: #bae6fd;
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -346,7 +349,8 @@ body {
     background: var(--white-surface);
     border-radius: 12px;
     padding: 16px;
-    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.05);
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.08);
+    border: 1px solid rgba(3, 105, 161, 0.05);
 }
 
 .timeline-date {
